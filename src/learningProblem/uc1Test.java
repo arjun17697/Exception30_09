@@ -8,10 +8,10 @@ import org.junit.Test;
 
 public class uc1Test {
 	@Test
-	public void testMoodAnalysis() throws Exception{
-		MoodAnalyser moodAnalyser =new MoodAnalyser();
-		String  mood=moodAnalyser.analyseMood("This is a sad message");
-		Assert.assertEquals( mood, "SAD");
+	public void returnHappyWhenGivenNull() {
+		MoodAnalyser moodAnalyser =new MoodAnalyser(null);
+		String  mood=moodAnalyser.analyseMood();
+		Assert.assertEquals( "Happy", mood);
 	}
 
 }
